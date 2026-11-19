@@ -1,0 +1,563 @@
+/* =====================================================================
+   PORTAFOLIO LABORATORIO CLÍNICO ECOPETROL
+   Estilo 100% fiel al modelo visual oficial
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --eco-primary-green: #007A33;
+  --eco-dark-green: #0D4721;
+  --eco-lime: #74B816;
+  --eco-lime-light: #A3E635;
+  --eco-blue: #0056B3;
+  --eco-charcoal: #1E293B;
+  --eco-slate: #334155;
+  
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #FFFFFF;
+  font-family: var(--font-body);
+  color: var(--eco-charcoal);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Master Page Canvas */
+.mockup-page-canvas {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 20px 40px 20px;
+  background-color: #FFFFFF;
+}
+
+/* Header Navbar */
+.mockup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 4px 18px 4px;
+}
+
+.mockup-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.mockup-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  padding: 6px 4px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.mockup-nav-item:hover {
+  color: var(--eco-primary-green);
+}
+
+.mockup-nav-item.active {
+  color: var(--eco-primary-green);
+  font-weight: 700;
+}
+
+.mockup-nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background-color: var(--eco-lime);
+  border-radius: 2px;
+}
+
+/* Pill Search Input */
+.mockup-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.mockup-search-input {
+  width: 100%;
+  padding: 7px 34px 7px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid #CBD5E1;
+  font-size: 0.78rem;
+  font-family: inherit;
+  color: #1E293B;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.mockup-search-input:focus {
+  border-color: var(--eco-primary-green);
+}
+
+.mockup-search-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--eco-primary-green);
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* The Main Green-Bordered Card (Borde aumentado para mayor definición) */
+.mockup-main-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 3.5px solid var(--eco-lime);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 122, 51, 0.08);
+  position: relative;
+}
+
+/* Hero Section con fondo blanco puro y bacterióloga en desvanecido invisible */
+.mockup-hero-section {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  padding: 34px 48px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.mockup-hero-bacteriologa {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: 65%;
+  object-fit: cover;
+  object-position: right center;
+  pointer-events: none;
+  z-index: 1;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.08) 12%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0.85) 50%, #000000 70%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.08) 12%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0.85) 50%, #000000 70%);
+}
+
+.mockup-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+}
+
+.mockup-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--eco-dark-green);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.mockup-hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin-top: 10px;
+}
+
+/* Section Pill Header */
+.mockup-pill-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.mockup-pill-line {
+  height: 3.5px; /* Aumentado grosor */
+  width: 120px;
+  background: linear-gradient(90deg, transparent, var(--eco-lime));
+  border-radius: 2px;
+}
+
+.mockup-pill-line.right {
+  background: linear-gradient(90deg, var(--eco-lime), transparent);
+}
+
+.mockup-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--eco-primary-green);
+  color: #FFFFFF;
+  padding: 7px 22px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 122, 51, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.mockup-pill-icon-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-pill-subtitle {
+  text-align: center;
+  font-size: 0.94rem;
+  color: #1E293B;
+  font-weight: 500;
+  margin: 6px 0 20px 0;
+}
+
+/* Technology Carousel inside Card - Ajustado para visualización profesional y grande */
+.mockup-tech-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 16px;
+  min-height: 290px;
+}
+
+.mockup-circle-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--eco-primary-green);
+  color: var(--eco-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.mockup-circle-arrow-btn:hover {
+  background-color: #F0FDF4;
+  border-color: var(--eco-lime);
+  transform: scale(1.08);
+}
+
+.mockup-tech-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.mockup-tech-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  height: 260px;
+  padding: 14px 20px;
+  background: radial-gradient(circle, rgba(240, 253, 244, 0.5) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.mockup-tech-img {
+  max-height: 240px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
+}
+
+.mockup-tech-img:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 10px 20px rgba(0, 122, 51, 0.15));
+}
+
+.mockup-tech-title {
+  font-family: var(--font-heading);
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--eco-blue);
+  line-height: 1;
+}
+
+.mockup-roche-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 12px;
+  border: 2px solid var(--eco-blue);
+  border-radius: 6px;
+  color: var(--eco-blue);
+  font-weight: 800;
+  font-size: 0.85rem;
+  background-color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.mockup-tech-subtitle {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 8px 0 14px 0;
+}
+
+.mockup-tech-checklist {
+  border-left: 3.5px solid var(--eco-lime); /* Grosor aumentado */
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mockup-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.mockup-green-check-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--eco-lime);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+/* Dots */
+.mockup-dots-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 10px 0;
+}
+
+.mockup-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mockup-dot.active {
+  background-color: var(--eco-primary-green);
+  width: 22px;
+  border-radius: 9999px;
+}
+
+/* Preanalytical Quick Navigation Bar */
+.mockup-preanalytical-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px auto 18px auto;
+  max-width: 900px;
+}
+
+.mockup-preanalytical-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #334155;
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.mockup-preanalytical-tab-btn:hover {
+  border-color: var(--eco-primary-green);
+  color: var(--eco-primary-green);
+  background-color: #F0FDF4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 122, 51, 0.12);
+}
+
+.mockup-preanalytical-tab-btn.active {
+  border-color: var(--eco-primary-green);
+  background-color: var(--eco-primary-green);
+  color: #FFFFFF;
+}
+
+/* 3 Cards at Bottom */
+.mockup-recommendations-section {
+  padding: 12px 24px 32px 24px;
+  background: linear-gradient(180deg, rgba(240, 253, 244, 0.45) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.mockup-reco-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mockup-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  flex: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.mockup-card-item {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.mockup-card-flexible {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 205px;
+  box-sizing: border-box;
+}
+
+.mockup-card-item:hover {
+  border-color: var(--eco-lime);
+  box-shadow: 0 8px 22px rgba(0, 122, 51, 0.12);
+  transform: translateY(-2px);
+}
+
+.mockup-card-title {
+  font-family: var(--font-heading);
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--eco-dark-green);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.mockup-card-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mockup-card-bullet {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.mockup-mini-step-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.mockup-mini-step-btn:hover {
+  background-color: #7C3AED;
+  border-color: #7C3AED;
+  color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mockup-header {
+    flex-wrap: wrap;
+  }
+  .mockup-nav-links {
+    display: none;
+  }
+  .mockup-hero-section {
+    padding: 24px 20px;
+    background-position: center;
+  }
+  .mockup-tech-content {
+    grid-template-columns: 1fr;
+  }
+  .mockup-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  /* En pantallas móviles se muestra 1 tarjeta a la vez para máxima legibilidad */
+  .mockup-cards-grid .mockup-card-item:nth-child(n+2) {
+    display: none;
+  }
+}
